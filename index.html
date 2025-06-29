@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Riyal Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-exchange-alt"></i>
+                <h1>SAR Currency Converter</h1>
+            </div>
+            <p class="subtitle">Convert Saudi Riyal to USD and EUR</p>
+        </header>
+
+        <main class="main-content">
+            <div class="converter-card">
+                <div class="input-section">
+                    <label for="sar-amount" class="input-label">
+                        <i class="fas fa-coins"></i>
+                        Amount in SAR
+                    </label>
+                    <div class="input-group">
+                        <input 
+                            type="number" 
+                            id="sar-amount" 
+                            placeholder="Enter amount in SAR"
+                            min="0"
+                            step="0.01"
+                        >
+                        <span class="currency-symbol">SAR</span>
+                    </div>
+                </div>
+
+                <div class="rates-info">
+                    <div class="rate-item">
+                        <span class="rate-label">1 SAR =</span>
+                        <span class="rate-value">0.27 USD</span>
+                    </div>
+                    <div class="rate-item">
+                        <span class="rate-label">1 SAR =</span>
+                        <span class="rate-value">0.25 EUR</span>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <div class="result-card usd">
+                        <div class="result-header">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>US Dollar (USD)</span>
+                        </div>
+                        <div class="result-amount" id="usd-result">0.00</div>
+                    </div>
+
+                    <div class="result-card eur">
+                        <div class="result-header">
+                            <i class="fas fa-euro-sign"></i>
+                            <span>Euro (EUR)</span>
+                        </div>
+                        <div class="result-amount" id="eur-result">0.00</div>
+                    </div>
+                </div>
+
+                <button class="convert-btn" id="convert-btn">
+                    <i class="fas fa-sync-alt"></i>
+                    Convert
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Fixed exchange rates: 1 SAR = 0.27 USD | 1 SAR = 0.25 EUR</p>
+            <p>Last updated: <span id="last-updated"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
